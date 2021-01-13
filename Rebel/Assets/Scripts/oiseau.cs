@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class oiseauVol : MonoBehaviour
+public class oiseau : MonoBehaviour
 {
+    [SerializeField] float walkSpeed = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,7 @@ public class oiseauVol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector2.right * walkSpeed *Time.deltaTime);
+       
     }
 }
